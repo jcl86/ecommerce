@@ -1,0 +1,9 @@
+B:\Repos\Ecommerce\src\Ecommerce.Model\bin\Debug\netstandard2.0\Ecommerce.Model.deps.json
+B:\Repos\Ecommerce\src\Ecommerce.Model\bin\Debug\netstandard2.0\Ecommerce.Model.dll
+B:\Repos\Ecommerce\src\Ecommerce.Model\bin\Debug\netstandard2.0\Ecommerce.Model.pdb
+B:\Repos\Ecommerce\src\Ecommerce.Model\obj\Debug\netstandard2.0\Ecommerce.Model.csprojAssemblyReference.cache
+B:\Repos\Ecommerce\src\Ecommerce.Model\obj\Debug\netstandard2.0\Ecommerce.Model.AssemblyInfoInputs.cache
+B:\Repos\Ecommerce\src\Ecommerce.Model\obj\Debug\netstandard2.0\Ecommerce.Model.AssemblyInfo.cs
+B:\Repos\Ecommerce\src\Ecommerce.Model\obj\Debug\netstandard2.0\Ecommerce.Model.csproj.CoreCompileInputs.cache
+B:\Repos\Ecommerce\src\Ecommerce.Model\obj\Debug\netstandard2.0\Ecommerce.Model.dll
+B:\Repos\Ecommerce\src\Ecommerce.Model\obj\Debug\netstandard2.0\Ecommerce.Model.pdb

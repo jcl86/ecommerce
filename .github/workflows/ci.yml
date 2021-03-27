@@ -1,0 +1,35 @@
+name: Continuos Integration
+
+on: [push, pull_request]
+    
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    services:
+      sql-server:
+        image: microsoft/mssql-server-linux
+        env:
+          ACCEPT_EULA: Y
+          MSSQL_SA_PASSWORD: Password12!
+        ports:
+          - 5433:1433
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+
+    - name: Install dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+        
+    - name: Run unit tests
+      run: dotnet test --no-restore --verbosity normal test/Ecommerce.UnitTests/Ecommerce.UnitTests.csproj
+
+    - name: Run functional tests
+      run: dotnet test --no-restore --verbosity normal test/Ecommerce.FunctionalTests/Ecommerce.FunctionalTests.csproj
