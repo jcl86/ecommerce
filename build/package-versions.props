@@ -1,0 +1,29 @@
+<Project>
+  
+  <ItemGroup Label="Production">
+    <PackageReference Update="Microsoft.EntityFrameworkCore" Version="$(NetVersion)" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.Design" Version="$(NetVersion)" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.Relational" Version="$(NetVersion)" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.SqlServer" Version="$(NetVersion)" />
+    <PackageReference Update="Microsoft.AspNetCore.Authentication.JwtBearer" Version="$(NetVersion)" />
+    <PackageReference Update="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+    <PackageReference Update="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Update="Hellang.Middleware.ProblemDetails" Version="6.4.0" />
+    <PackageReference Update="Serilog.AspNetCore" Version="5.0.0" />
+    <PackageReference Update="Serilog.Sinks.ApplicationInsights" Version="3.1.0" />
+    <PackageReference Update="Microsoft.ApplicationInsights.AspNetCore" Version="2.20.0" />
+    <PackageReference Update="FluentValidation.AspNetCore" Version="10.3.6" />
+  </ItemGroup>
+
+  <ItemGroup Label="Testing">
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Update="xunit" Version="2.4.1" />
+    <PackageReference Update="xunit.runner.visualstudio" Version="2.4.3" />
+    <PackageReference Update="Bogus" Version="34.0.1" />
+    <PackageReference Update="FluentAssertions" Version="6.5.1" />
+    <PackageReference Update="coverlet.collector" Version="3.1.0" />
+    <PackageReference Update="Acheve.TestHost" Version="3.0.0" />
+    <PackageReference Update="NSubstitute" Version="4.2.2" />
+  </ItemGroup>
+
+</Project>

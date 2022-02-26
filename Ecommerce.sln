@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31005.135
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1CE3BB4C-88E0-43FD-B267-FA441474A66C}"
 EndProject
@@ -15,20 +15,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FFBD348E-6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.FunctionalTests", "test\Ecommerce.FunctionalTests\Ecommerce.FunctionalTests.csproj", "{64D33C5C-10EC-4223-BBEC-F2F57D04AC62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Model", "src\Ecommerce.Model\Ecommerce.Model.csproj", "{FC7BA12E-4FF8-492D-8D47-65ACED6CE9B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Model", "src\Ecommerce.Model\Ecommerce.Model.csproj", "{FC7BA12E-4FF8-492D-8D47-65ACED6CE9B2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9970DA7-0E76-4E14-823D-14012CF27179}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\ci-cd.yml = .github\workflows\ci-cd.yml
-		.github\workflows\ci.yml = .github\workflows\ci.yml
-		build\dependencies.props = build\dependencies.props
 		Directory.Build.props = Directory.Build.props
 		Directory.Build.targets = Directory.Build.targets
 		.config\dotnet-tools.json = .config\dotnet-tools.json
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.UnitTests", "test\Ecommerce.UnitTests\Ecommerce.UnitTests.csproj", "{F2D91CF1-71BF-44FD-AA9A-02DC5338152E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.UnitTests", "test\Ecommerce.UnitTests\Ecommerce.UnitTests.csproj", "{F2D91CF1-71BF-44FD-AA9A-02DC5338152E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{7B52EBF6-BC71-4664-AF2D-AF0FFB86831F}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci-cd.yml = .github\workflows\ci-cd.yml
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dependencies", "dependencies", "{C86CA978-63F1-4B11-B79C-F9897D1EF795}"
+	ProjectSection(SolutionItems) = preProject
+		build\dependencies.props = build\dependencies.props
+		build\package-versions.props = build\package-versions.props
+		build\properties.props = build\properties.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Api", "src\Ecommerce.Api\Ecommerce.Api.csproj", "{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -112,6 +124,18 @@ Global
 		{F2D91CF1-71BF-44FD-AA9A-02DC5338152E}.Release|x64.Build.0 = Release|Any CPU
 		{F2D91CF1-71BF-44FD-AA9A-02DC5338152E}.Release|x86.ActiveCfg = Release|Any CPU
 		{F2D91CF1-71BF-44FD-AA9A-02DC5338152E}.Release|x86.Build.0 = Release|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Debug|x64.Build.0 = Debug|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Debug|x86.Build.0 = Debug|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Release|x64.ActiveCfg = Release|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Release|x64.Build.0 = Release|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Release|x86.ActiveCfg = Release|Any CPU
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +147,9 @@ Global
 		{64D33C5C-10EC-4223-BBEC-F2F57D04AC62} = {FFBD348E-60A7-463F-BFBF-C1781EB370E5}
 		{FC7BA12E-4FF8-492D-8D47-65ACED6CE9B2} = {1CE3BB4C-88E0-43FD-B267-FA441474A66C}
 		{F2D91CF1-71BF-44FD-AA9A-02DC5338152E} = {FFBD348E-60A7-463F-BFBF-C1781EB370E5}
+		{7B52EBF6-BC71-4664-AF2D-AF0FFB86831F} = {B9970DA7-0E76-4E14-823D-14012CF27179}
+		{C86CA978-63F1-4B11-B79C-F9897D1EF795} = {B9970DA7-0E76-4E14-823D-14012CF27179}
+		{CF97C057-0D7E-4D84-BDA7-0D823CC5CCD3} = {1CE3BB4C-88E0-43FD-B267-FA441474A66C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {963450C4-A6BE-43C2-BFB3-2BC5E9EA31EE}

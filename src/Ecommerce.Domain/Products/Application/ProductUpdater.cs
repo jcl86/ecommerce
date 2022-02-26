@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Domain
 {
+    [Service]
     public class ProductUpdater
     {
         private readonly ProductFinder finder;

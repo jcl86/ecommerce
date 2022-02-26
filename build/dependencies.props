@@ -1,7 +1,9 @@
 <Project>
-    <PropertyGroup Label="Default project values">
-        <NetVersion>net5.0</NetVersion>
-        <NetStandardVersion>netstandard2.0</NetStandardVersion>
-        <LangVersion>9.0</LangVersion>
-    </PropertyGroup>
+  <PropertyGroup Label="SDK Versions">
+    <NetTargetVersion>net6.0</NetTargetVersion>
+    <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Nuget Packages Versions">
+    <NetVersion>6.0.2</NetVersion>
+  </PropertyGroup>
 </Project>

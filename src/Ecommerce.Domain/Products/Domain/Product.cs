@@ -15,9 +15,9 @@ namespace Ecommerce.Domain
         public decimal Price { get; private set; }
         public void UpdatePrice(decimal value) => Price = value; 
 
-        public Product(Guid id, string name, string description, decimal price)
+        public Product(string name, string description, decimal price)
         {
-            Id = id;
+            Id = Guid.NewGuid();
             Name = name;
             Description = description;
             Price = price;

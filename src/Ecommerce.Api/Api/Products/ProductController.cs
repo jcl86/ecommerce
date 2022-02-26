@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Ecommerce.Domain;
+﻿using Ecommerce.Domain;
 using Ecommerce.Model;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Ecommerce.Host.Controllers
+namespace Ecommerce.Api.Controllers
 {
     [ApiController]
-    [Route(ProductsEndpoints.Base)]
+    [Route(Endpoints.Products.Base)]
     public class ProductController : ControllerBase
     {
         private readonly ProductCreator creator;

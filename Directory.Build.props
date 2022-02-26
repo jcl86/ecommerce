@@ -1,9 +1,4 @@
 <Project>
     <Import Project="build/dependencies.props"/>
-    <PropertyGroup Label="Default Metadata">
-        <Authors>jcl86</Authors>
-        <Company>jcl86</Company>
-        <PublishUrl></PublishUrl>
-        <RepositoryUrl>https://github.com/jcl86/ecommerce</RepositoryUrl>
-    </PropertyGroup>
+    <Import Project="build/properties.props"/>
 </Project>

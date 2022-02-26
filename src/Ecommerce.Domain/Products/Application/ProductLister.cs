@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Domain
 {
+    [Service]
     public class ProductLister
     {
         private readonly IProductRepository productRepository;

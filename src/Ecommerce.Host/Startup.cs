@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ecommerce.Api;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,49 +11,49 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
 
 namespace Ecommerce.Host
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IWebHostEnvironment environment;
+        private readonly IConfiguration configuration;
+
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
-            Configuration = configuration;
+            this.configuration = configuration;
+            this.environment = environment;
         }
 
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ecommerce.Host", Version = "v1" });
-            });
+            ApiConfiguration.ConfigureServices(services, environment, configuration);
+            services.AddCors();
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
-            if (env.IsDevelopment())
+            ApiConfiguration.Configure(app, host =>
             {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ecommerce.Host v1"));
-            }
+                if (environment.IsDevelopment())
+                {
+                    host.UseSwagger();
+                    host.UseSwaggerUI();
+                }
 
-            app.UseHttpsRedirection();
+                var allowedOrigins = configuration.GetSection("AllowedOrigins").Get<IEnumerable<string>>();
 
-            app.UseRouting();
+                host.UseCors(policy =>
+                         policy.WithOrigins(allowedOrigins.ToArray())
+                         .AllowAnyMethod()
+                         .WithHeaders(HeaderNames.ContentType, HeaderNames.Authorization)
+                         .AllowCredentials());
 
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
+                return host;
             });
         }
     }

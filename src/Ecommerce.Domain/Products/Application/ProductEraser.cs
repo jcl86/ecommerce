@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Domain
 {
+    [Service]
     public class ProductEraser
     {
         private readonly ProductFinder finder;
