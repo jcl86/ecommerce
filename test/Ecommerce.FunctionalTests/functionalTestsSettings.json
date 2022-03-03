@@ -1,2 +1,9 @@
 ﻿{
+  "SecretKey": "",
+  "UserSettings": {
+    "DefaultAdministrator": {
+      "Username": "admin",
+      "Password": "Password1234-"
+    }
+  }
 }

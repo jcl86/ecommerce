@@ -13,10 +13,13 @@ namespace Ecommerce.Api
         {
             return services
                 .AddControllersFromCurrentProject()
+                .AddCustomAspnetIdentity(configuration)
                 .AddCustomServices()
                 .ConfigureProblemDetails(environment)
                 .AddRouting()
-                .CustomizeModelBindingErrorBehaviour();
+                .AddAuthorization(Policies.Configure)
+                .CustomizeModelBindingErrorBehaviour()
+                .AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         public static IApplicationBuilder Configure(IApplicationBuilder app, Func<IApplicationBuilder, IApplicationBuilder> configureHost)
@@ -26,8 +29,8 @@ namespace Ecommerce.Api
             return configureHost(app)
                 .UseProblemDetails()
                 .UseRouting()
-                //.UseAuthentication()
-                //.UseAuthorization()
+                .UseAuthentication()
+                .UseAuthorization()
                 .UseEndpoints(endpoints =>
                 {
                     endpoints.MapControllers();

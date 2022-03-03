@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ecommerce.Model
+namespace Ecommerce.Core.Model
 {
     public partial class Endpoints
     {

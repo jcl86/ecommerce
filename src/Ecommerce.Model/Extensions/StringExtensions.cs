@@ -1,4 +1,4 @@
-﻿namespace Ecommerce.Model
+﻿namespace System
 {
     public static class StringExtensions
     {

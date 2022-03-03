@@ -4,4 +4,8 @@
     <TargetFramework>$(NetTargetVersion)</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="BoundedContexts\Sales\Orders\" />
+  </ItemGroup>
+
 </Project>
