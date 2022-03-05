@@ -2,7 +2,7 @@
 using FluentAssertions;
 using System.Net;
 
-namespace Ecommerce.FunctionalTests
+namespace Ecommerce.Core.FunctionalTests
 {
     public static class TestExtensions
     {

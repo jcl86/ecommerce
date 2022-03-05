@@ -1,4 +1,4 @@
-﻿namespace Ecommerce.Api
+﻿namespace Ecommerce.Core.Api
 {
     public class CustomClaims
     {

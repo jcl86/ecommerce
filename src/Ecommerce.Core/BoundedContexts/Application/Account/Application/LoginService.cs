@@ -26,7 +26,7 @@ namespace Ecommerce.Application.Domain
             var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
             if (!result.Succeeded)
             {
-                throw new UnauthorizedAccessException(Application.Model.Messages.LoginError);
+                throw new UnauthorizedAccessException(Account.Messages.LoginError);
             }
 
             string token = tokenGenerator.GenerateToken(user);

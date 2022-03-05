@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
-using Ecommerce.Domain;
+using Ecommerce.Application.Domain;
+using Ecommerce.Core.Api;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Ecommerce.Api.Controllers
+namespace Ecommerce.Application.Api
 {
     [ApiController]
     [Route("api/users")]

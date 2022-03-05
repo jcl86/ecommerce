@@ -1,12 +1,12 @@
 ﻿using Acheve.AspNetCore.TestHost.Security;
 using Acheve.TestHost;
-using Ecommerce.Api;
+using Ecommerce.Core.Api;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Ecommerce.FunctionalTests
+namespace Ecommerce.Core.FunctionalTests
 {
     public class Startup
     {

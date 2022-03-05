@@ -1,4 +1,4 @@
-﻿using Ecommerce.Api;
+﻿using Ecommerce.Sales.Domain;
 using FluentValidation.AspNetCore;
 
 namespace Microsoft.Extensions.DependencyInjection

@@ -1,8 +1,8 @@
-﻿using Ecommerce.Domain;
-using Ecommerce.Model;
+﻿using Ecommerce.Sales.Domain;
+using Ecommerce.Sales.Model;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Ecommerce.Api.Controllers
+namespace Ecommerce.Sales.Api
 {
     [ApiController]
     [Route(Endpoints.Products.Base)]

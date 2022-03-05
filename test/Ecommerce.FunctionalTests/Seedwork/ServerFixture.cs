@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 
-namespace Ecommerce.FunctionalTests
+namespace Ecommerce.Core.FunctionalTests
 {
     public class ServerFixture
     {

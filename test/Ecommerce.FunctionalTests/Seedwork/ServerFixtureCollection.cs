@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Ecommerce.FunctionalTests
+namespace Ecommerce.Core.FunctionalTests
 {
     [CollectionDefinition(nameof(ServerFixtureCollection))]
     public class ServerFixtureCollection : ICollectionFixture<ServerFixture>

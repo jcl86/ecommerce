@@ -1,11 +1,12 @@
-﻿using Ecommerce.Model;
+﻿using Ecommerce.Core.Model;
+using Ecommerce.Model;
 using Hellang.Middleware.ProblemDetails;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Ecommerce.Api
+namespace Ecommerce.Core.Api
 {
     public static class ApiConfiguration
     {

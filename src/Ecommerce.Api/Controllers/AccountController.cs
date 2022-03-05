@@ -1,9 +1,10 @@
-﻿using Ecommerce.Domain;
-using Ecommerce.Model;
+﻿using Ecommerce.Application.Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Ecommerce.Application.Model;
+using Ecommerce.Core.Api;
 
-namespace Ecommerce.Api.Controllers
+namespace Ecommerce.Application.Api
 {
     [AllowAnonymous]
     [ApiController]

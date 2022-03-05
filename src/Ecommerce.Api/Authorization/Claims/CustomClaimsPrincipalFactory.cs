@@ -1,10 +1,10 @@
-﻿using Ecommerce.Domain;
+﻿using Ecommerce.Application.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Security.Claims;
 
-namespace Ecommerce.Api
+namespace Ecommerce.Core.Api
 {
     public class CustomClaimsPrincipalFactory : UserClaimsPrincipalFactory<User, Role>
     {

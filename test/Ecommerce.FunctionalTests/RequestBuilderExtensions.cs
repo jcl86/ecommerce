@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.TestHost;
 using System.Text;
 
-namespace Ecommerce.FunctionalTests
+namespace Ecommerce.Core.FunctionalTests
 {
     public static class RequestBuilderExtensions
     {

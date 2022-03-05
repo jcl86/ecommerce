@@ -1,4 +1,4 @@
-﻿using Ecommerce.Domain;
+﻿using Ecommerce.Core.Domain;
 using Hellang.Middleware.ProblemDetails;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;

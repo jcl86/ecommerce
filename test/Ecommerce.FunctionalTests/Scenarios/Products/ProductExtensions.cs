@@ -1,7 +1,8 @@
-﻿using Ecommerce.Model;
+﻿using Ecommerce.Core.FunctionalTests;
+using Ecommerce.Sales.Model;
 using Microsoft.AspNetCore.Http;
 
-namespace Ecommerce.FunctionalTests
+namespace Ecommerce.Sales.FunctionalTests
 {
     public static class ProductExtensions
     {
@@ -21,7 +22,7 @@ namespace Ecommerce.FunctionalTests
             return result;
         }
 
-        public static async Task<Product> FindProductInDatabase(this ServerFixture given, Guid productId)
+        public static async Task<Product> FindProductInDatabase(this ServerFixture given, string productId)
         {
             var response = await given
                 .Server

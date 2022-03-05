@@ -1,9 +1,10 @@
-﻿using Ecommerce.Model;
+﻿using Ecommerce.Core.FunctionalTests;
+using Ecommerce.Sales.Model;
 using FluentAssertions;
 using Microsoft.AspNetCore.Http;
 using Xunit;
 
-namespace Ecommerce.FunctionalTests
+namespace Ecommerce.Sales.FunctionalTests
 {
     [Collection(nameof(ServerFixtureCollection))]
     public class ProductShould
@@ -83,7 +84,7 @@ namespace Ecommerce.FunctionalTests
         [Fact]
         public async Task Fail_to_update_when_does_not_exist()
         {
-            var nonExistingEntityId = Guid.NewGuid();
+            var nonExistingEntityId = Guid.NewGuid().ToString();
             var dto = ProductMother.Update();
 
             var response = await Given.Server
@@ -115,7 +116,7 @@ namespace Ecommerce.FunctionalTests
         [Fact]
         public async Task Fail_to_delete_when_does_not_exist()
         {
-            var nonExistingEntityId = Guid.NewGuid();
+            var nonExistingEntityId = Guid.NewGuid().ToString();
 
             var response = await Given.Server
                .CreateRequest(Endpoints.Products.Delete(nonExistingEntityId))

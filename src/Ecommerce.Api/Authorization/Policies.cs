@@ -1,7 +1,7 @@
-﻿using Ecommerce.Domain;
+﻿using Ecommerce.Application.Domain;
 using Microsoft.AspNetCore.Authorization;
 
-namespace Ecommerce.Api
+namespace Ecommerce.Core.Api
 {
     public static partial class Policies
     {

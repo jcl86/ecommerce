@@ -1,7 +1,7 @@
 ﻿using Bogus;
-using Ecommerce.Model;
+using Ecommerce.Sales.Model;
 
-namespace Ecommerce.FunctionalTests
+namespace Ecommerce.Sales.FunctionalTests
 {
     public static class ProductMother
     {

@@ -1,12 +1,12 @@
-﻿using Ecommerce.Domain;
-using Ecommerce.Domain.Data;
+﻿using Ecommerce.Application.Domain;
+using Ecommerce.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace Ecommerce.Api
+namespace Ecommerce.Core.Api
 {
     public static class IdentityExtensions
     {

@@ -1,4 +1,5 @@
-﻿using Ecommerce.Domain;
+﻿using Ecommerce.Core.Domain;
+using Ecommerce.Sales.Domain;
 using System.Reflection;
 
 namespace Microsoft.Extensions.DependencyInjection
